@@ -8,24 +8,21 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("ciao");
+
     }
 
-
     // primo metodo: FATTORIALE
-    public int fattoriale(int numero){
+    public static int fattoriale(int numero){
         int fatt = 1;
-        if(numero ==0)
-        {
-            return 1;
-        }
-        else{
-            for (int i = 1; i <= numero; i++)
-            {
-                fatt = fatt * i;
+
+            if (numero == 0) {
+                return 1;
+            } else {
+                for (int i = 1; i <= numero; i++) {
+                    fatt = fatt * i;
+                }
             }
-        }
-        return fatt;
+            return fatt;
     }
     //secondo metodo: ELEVAMENTO A POTENZA ( numeri interi per comodità ) a^b (a,b) interi
     public int potenza(int a, int b){
