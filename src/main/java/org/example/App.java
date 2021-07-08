@@ -11,7 +11,11 @@ public class App
 
     }
 
-    // primo metodo: FATTORIALE
+    /**
+     * <p> Metodo che svolge il fattoriale</p>
+     * @param numero numero che vogliamo
+     * @return il fattoriale del numero desiderato
+     */
     public static int fattoriale(int numero){
         int fatt = 1;
 
@@ -24,7 +28,12 @@ public class App
             }
             return fatt;
     }
-    //secondo metodo: ELEVAMENTO A POTENZA ( numeri interi per comodità ) a^b (a,b) interi
+    /**
+     * <p> Metodo che svolge la potenza</p>
+     * @param a base
+     * @param b esponente
+     * @return a elevato b
+     */
     public int potenza(int a, int b){
         int pot = 1;
         if(b==0){
@@ -39,6 +48,12 @@ public class App
         return pot;
 }
     //terzo metodo: Coefficiente binomiale (n k) = (n!)/(k!*(n-k)!) n,k interi >=0
+    /**
+     * <p> Metodo che svolge il coefficiente binomiale</p>
+     * @param n primo numero
+     * @param k secondo numero
+     * @return il coefficiente binomiale
+     */
     public  int binomiale(int n, int k){
         int n_fatt = fattoriale(n);
         int k_fatt = fattoriale(k);
