@@ -1,5 +1,6 @@
 package org.example.web;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping; // uso getmapping
@@ -10,10 +11,15 @@ import org.example.App;
 @RestController
 public class AppController {
 
-    App app = new App();
+
+    private final App app;
+    public AppController(App app){
+        this.app=app;
+    }
+
 
     @GetMapping("/fattoriale/{numero}")
-    public  int Calcolofattoriale(@PathVariable("numero") int numero){
+    public  int Calcolofattoriale(@PathVariable("numero") int numero) {
         return app.fattoriale(numero);
     }
 

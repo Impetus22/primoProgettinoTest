@@ -1,9 +1,12 @@
 package org.example;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Hello world!
  *
  */
+@Service
 public class App 
 {
     public static void main( String[] args )
