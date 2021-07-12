@@ -3,11 +3,17 @@ package org.example;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.hamcrest.Matchers.containsString;
 
+@SpringBootTest
 @WebMvcTest
 public class WebLayerTestWS {
 
@@ -16,8 +22,8 @@ public class WebLayerTestWS {
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("http://localhost:8080/fattoriale/6")).andExpect(status().isOk());
-        System.out.println("Ha funzionato");
+        this.mockMvc.perform(get("http://localhost:8080/")).andDo(print()).andExpect(status().isOk());
+
     }
 
 

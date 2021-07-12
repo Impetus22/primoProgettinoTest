@@ -33,5 +33,10 @@ public class AppController {
         return app.binomiale(n,k);
     }
 
+    //funzione di test /
+    @RequestMapping("/")
+    public String doHello(){
+        return "Hello World, this is a random text";
+    }
 
 }
