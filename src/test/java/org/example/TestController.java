@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.web.AppController;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
@@ -26,4 +27,58 @@ public class TestController {
     //mockito posso simularne il comportamento e continuare il test.
     //verifico inoltre quante volte il metodo viene invocato
 
+    //se infatti in App.java vado a canellare il calcolo del fattoriale, scrivendo un return 0, se faccio un
+    //        System.out.println(numero);    ottengo comunque 24
+
+
+    @Test
+    public void secondTest(){
+        App mockedList = mock(App.class);
+
+        //given
+        when(mockedList.binomiale(4,3)).thenReturn(4);
+
+        //when
+        AppController appController = new AppController(mockedList);
+        appController.Coefficientebinomiale(4,3);
+
+        //then
+        verify(mockedList,times(1)).binomiale(4,3);
+
+    }
+
+    @Test
+    public void thirdTest(){
+        App mockedList = mock(App.class);
+
+        //given
+        when(mockedList.potenza(2,3)).thenReturn(8);
+
+        //when
+        AppController appController = new AppController(mockedList);
+        int valore = appController.Elevamentopotenza(2,3);
+
+        //then
+        verify(mockedList,times(1)).potenza(2,3);
+        int atteso = 8;
+        Assertions.assertEquals(atteso,valore);
+    }
+
+    //Esempio di ERRORE
+    @Test
+    public void fourthTest(){
+        App mockedList = mock(App.class);
+
+        //given
+        when(mockedList.potenza(2,3)).thenReturn(8);
+
+        //when
+        AppController appController = new AppController(mockedList);
+        int valore = appController.Elevamentopotenza(2,4);
+
+        //then
+        verify(mockedList,times(1)).potenza(2,3);
+        int atteso = 8;
+        Assertions.assertEquals(atteso,valore);
+    }
 }
