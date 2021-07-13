@@ -22,7 +22,6 @@ public class WebLayerTestWS {
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
         this.mockMvc.perform(get("http://localhost:8080/")).andDo(print()).andExpect(status().isOk());
-
     }
 
 
