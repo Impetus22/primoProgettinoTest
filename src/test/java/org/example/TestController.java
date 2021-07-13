@@ -7,7 +7,6 @@ import static org.mockito.Mockito.*;
 
 
 
-
 public class TestController {
     @Test
     public void firstTest(){
