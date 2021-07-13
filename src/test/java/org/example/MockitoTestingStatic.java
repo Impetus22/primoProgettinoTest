@@ -41,7 +41,7 @@ public class MockitoTestingStatic {
                 mockedList.binomiale(5,2);
                 //verifico che il metodo sia partito
                 //verify(mockedList).binomiale(5,2); // esempio che funziona
-                // verify(mockedList).binomiale(3,2); //esempio che non funziona
+                //verify(mockedList).binomiale(3,2); //esempio che non funziona
                 // verify(mockedList).fattoriale(5); // esempio di errore dove però mi mostra una interazione con .binomiale(5,2);
                 // se ora aggiungo il seguente codice :
                 // mockedList.binomiale(7,5);
