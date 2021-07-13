@@ -51,7 +51,7 @@ public class MockitoTestingStatic {
             @Test
             public void invocationsMockitoTest(){
                 App mockedList = mock(App.class);
-// invoco 5 volte (?)
+//invoco 5 volte (?)
                 verify(mockedList, times(5));
 
             }
