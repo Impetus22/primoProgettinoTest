@@ -22,7 +22,7 @@ public class TestDiAvvioVerificato {
     private AppController controller;
 
     @Test
-    public void contextLoads() throws Exception{
+    public void contextLoads() throws Exception {
         assertThat(controller).isNotNull();
     }
 }

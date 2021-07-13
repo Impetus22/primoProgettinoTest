@@ -1,6 +1,7 @@
-//stesso problema perchè uso assertThat
-
 /*
+//Funziona
+
+
 package org.example;
 
 
@@ -11,6 +12,9 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import static org.assertj.core.api.Assertions.assertThat;
 
+
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class HttpTest {
