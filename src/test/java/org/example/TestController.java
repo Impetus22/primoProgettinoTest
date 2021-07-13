@@ -1,5 +1,4 @@
 package org.example;
-
 import org.example.web.AppController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
