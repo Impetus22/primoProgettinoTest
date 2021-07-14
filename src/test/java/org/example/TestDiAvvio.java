@@ -2,7 +2,6 @@
 
 package org.example;
 
-
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class TestDiAvvio {
 
     @Test
-    public void contextLoads(){
+    public void contextLoads() {
 
     }
 }
