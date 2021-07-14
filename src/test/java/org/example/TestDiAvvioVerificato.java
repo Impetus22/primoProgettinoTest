@@ -20,9 +20,8 @@ public class TestDiAvvioVerificato {
 
     @Autowired
     private AppController controller;
-
     @Test
-    public void contextLoads() throws Exception{
+    public void contextLoads() throws Exception {
         assertThat(controller).isNotNull();
     }
 }

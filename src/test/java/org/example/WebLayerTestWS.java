@@ -13,7 +13,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.hamcrest.Matchers.containsString;
 
-@SpringBootTest
 @WebMvcTest
 public class WebLayerTestWS {
 
@@ -23,7 +22,6 @@ public class WebLayerTestWS {
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
         this.mockMvc.perform(get("http://localhost:8080/")).andDo(print()).andExpect(status().isOk());
-
     }
 
 
