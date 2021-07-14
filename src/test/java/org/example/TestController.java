@@ -43,7 +43,7 @@ public class TestController {
 
         //then
         verify(mockedList,times(1)).binomiale(4,3);
-
+        //verify(mockedList).fattoriale(4);   esempio di errore, che però mi riconosce l'interazione con app.binomiale(4,3)
     }
 
     @Test
