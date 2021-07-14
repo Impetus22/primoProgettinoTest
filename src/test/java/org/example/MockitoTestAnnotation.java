@@ -22,7 +22,6 @@ public class MockitoTestAnnotation {
         verify(mockedList).binomiale(5, 2);
         when(mockedList.binomiale(3, 3)).thenReturn(1);
         Assertions.assertEquals(mockedList.binomiale(3, 3), 1);
-
     }
 
     @Test
@@ -32,6 +31,4 @@ public class MockitoTestAnnotation {
         //when(mockedList.fattoriale(1)).thenReturn(1);
         mockedList.binomiale(5, 4);
     }
-
-
 }

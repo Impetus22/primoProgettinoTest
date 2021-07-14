@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import org.example.App;
 
-
 @RestController
 public class AppController {
 

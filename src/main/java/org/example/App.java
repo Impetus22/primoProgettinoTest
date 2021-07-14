@@ -64,5 +64,6 @@ public class App {
         int nkFatt = fattoriale(n - k);
         return nFatt / (kFatt * nkFatt);
     }
+
 }
 
