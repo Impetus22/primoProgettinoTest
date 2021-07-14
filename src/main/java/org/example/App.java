@@ -19,7 +19,7 @@ public class App
      * @param numero numero che vogliamo
      * @return il fattoriale del numero desiderato
      */
-    public static int fattoriale(int numero){
+    public int fattoriale(int numero){
         int fatt = 1;
 
             if (numero == 0) {

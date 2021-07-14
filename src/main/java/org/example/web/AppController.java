@@ -1,5 +1,6 @@
 package org.example.web;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,7 +37,7 @@ public class AppController {
     //funzione di test /
     @RequestMapping("/")
     public String doHello(){
-        return "Hello World, this is a random text";
+        return "paginaPrincipale";
     }
 
 }
