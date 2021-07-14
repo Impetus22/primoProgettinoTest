@@ -1,4 +1,9 @@
 .idea/
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
 */target/**
 target
-JavaDoc
+JavaDoc/
