@@ -12,7 +12,7 @@ guarda esempio con assertEquals()
 3)dato che il mock registra tutte le interazioni, è molto utile per verificare quante volte un metodo viene chiamato
 guarda l'esempio introduttivo
 */
-public class MockitoTestingStatic {
+public class MockitoStaticTest {
 
     @Test
     public void firstMockitoTest() {

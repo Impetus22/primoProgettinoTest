@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.*;
 
-public class TestController {
+public class ControllerTest {
     @Test
     public void firstTest() {
         App mockedList = mock(App.class); // creo mock della classe App ( che rappresenta il mio servizio con i metodi )

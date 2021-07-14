@@ -11,7 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @WebMvcTest
-public class WebLayerTestWS {
+public class WebLayerWSTest {
 
     @Autowired
     private MockMvc mockMvc;

@@ -11,7 +11,7 @@ import static org.mockito.Mockito.when;
 
 // aggiungo questa annotazione
 @ExtendWith(MockitoExtension.class)
-public class MockitoTestAnnotation {
+public class MockitoAnnotationTest {
 
     @Mock
     App mockedList;
@@ -21,7 +21,7 @@ public class MockitoTestAnnotation {
         mockedList.binomiale(5, 2);
         verify(mockedList).binomiale(5, 2);
         when(mockedList.binomiale(3, 3)).thenReturn(1);
-        Assertions.assertEquals(mockedList.binomiale(3, 3), 1);
+        Assertions.assertEquals(1,mockedList.binomiale(3, 3));
     }
 
     @Test
