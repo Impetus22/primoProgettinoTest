@@ -1,3 +1,14 @@
+/*BREVE TEORIA
+Con WireMock creo una sorta di server che mi riesce ad "intercettare" le mie chiamate API
+in questo modo io posso assegnare delle Response a queste chiamate in modo tale che se la mia Api non fosse imlementata,
+io posso comunque avere una interpretazione e una risposta e dunque continuare con il test
+Una volta che creo la vera chiamata Http a quell'Api viene dunque intercettata dal MockServer e posso fare le varie verifiche
+ */
+
+
+
+
+
 package org.example;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
