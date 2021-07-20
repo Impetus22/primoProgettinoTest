@@ -1,4 +1,4 @@
-package org.example;
+/*package org.example;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
@@ -14,8 +14,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class WiremockTest {
-    private static final String HOST = "localhost";
-    private static final int PORT = 8080;
+    private static final String HOST = "mock-dev.vtlab.local";
+    private static final int PORT = 8083;
     private static WireMockServer server = new WireMockServer(PORT);
     @BeforeClass
     public static void inizializzoServer(){
@@ -27,13 +27,13 @@ public class WiremockTest {
         mockResponse.withStatusMessage("Hello");
         mockResponse.withHeader("token", "11");
         mockResponse.withBody("testo nel body");
-        WireMock.givenThat(WireMock.get("/fattoriale/5").willReturn(mockResponse)); // associo la mia Api
+        WireMock.givenThat(WireMock.get("/v1/profile").willReturn(mockResponse)); // associo la mia Api
     }
     @Test
     public void testing(){
-        String testingApi = "http://localhost:"+PORT+"fattoriale/5";
-        Response response = RestAssured.given().get("http://localhost:8080/fattoriale/5").then().statusCode(201).extract().response();
-        WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/fattoriale/5")));
+        String testingApi = "http://mock-dev.vtlab.local:"+PORT;
+        Response response = RestAssured.given().get(testingApi).then().statusCode(201).extract().response();
+        WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/v1/profile")));
         Assert.assertEquals(response.getHeader("token"),"11");
         Assert.assertEquals(response.getBody().asString(),"testo nel body");
 
@@ -45,3 +45,4 @@ public class WiremockTest {
         }
     }
 }
+*/

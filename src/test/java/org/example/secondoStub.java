@@ -4,11 +4,7 @@ in questo modo io posso assegnare delle Response a queste chiamate in modo tale 
 io posso comunque avere una interpretazione e una risposta e dunque continuare con il test
 Una volta che creo la vera chiamata Http a quell'Api viene dunque intercettata dal MockServer e posso fare le varie verifiche
  */
-
-
-
-
-
+/*
 package org.example;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
@@ -62,3 +58,4 @@ public class secondoStub {
     }
 
 }
+*/
