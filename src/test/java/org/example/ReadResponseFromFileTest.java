@@ -25,20 +25,20 @@ public class ReadResponseFromFileTest {
         WireMock.configureFor(HOST,PORT);
         // ora imposto le risposte
         ResponseDefinitionBuilder mockResponse = new ResponseDefinitionBuilder();
-        mockResponse.withStatus(201);
-
+        mockResponse.withStatus(200);
         mockResponse.withBodyFile("src/test/resources/__files/json/index.json"); //file json
-
-        WireMock.givenThat(WireMock.get("/v1/profile").willReturn(mockResponse)); // associo la mia Api
+        WireMock.stubFor(WireMock.get("/v1/profile").willReturn(mockResponse));
+       // WireMock.givenThat(WireMock.get("/v1/profile").willReturn(mockResponse)); // associo la mia Api
     }
     @Test
     public void testing(){
-        String testingApi = "http://mock-dev.vtlab.local:"+PORT;
-        String response = RestAssured.given().get(testingApi).then().statusCode(201).extract().response().asString();
+        String testingApi = "http://mock-dev.vtlab.local:"+PORT+"/v1/profile";
+        Response response = RestAssured.given().get(testingApi).then().statusCode(200).extract().response();
         // verifico che il server ha ricevuto una chiamata al corretto url
         WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/v1/profile")));
         // alcune verifiche
-       // Assert.assertEquals(response.jsonPath().get("profileData.hashedUsername"),"75c3d038ad8dae2825012e1b1e024b2c");
+       Assert.assertEquals(response.jsonPath().get("profileData.hashedUsername"),"75c3d038ad8dae2825012e1b1e024b2c");
+       Assert.assertEquals(response.jsonPath().get("profileData.colaList[0]"),"Lista12");
     }
     @AfterClass
     public static void chiudoServer(){

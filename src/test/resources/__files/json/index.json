@@ -15,6 +15,43 @@
     "isFixedRole": true,
     "isWalletRole": false,
     "isEnriched": false,
-    "isLogged": true
-  }
+    "isLogged": true,
+    "colaList": [
+      "Lista12",
+      "Lista2",
+      "Lista7"
+    ]
+  },
+  "assetData": {
+    "companyName": "CDC 2698 RESP ROBERTO TONINI SPA",
+    "flagVas": true,
+    "flagPbx": true,
+    "flagDsl": true,
+    "flagTollFree": true,
+    "flagPaSpc": false,
+    "flagArdeide": false,
+    "flagVFAnalytics": false,
+    "flagBusinessSolution": true,
+    "isAssetFixed": true,
+    "isAssetMobile": true,
+    "isAssetMobilePrepaid": false,
+    "isAssetMobilePostpaid": true,
+    "isHotline": false,
+    "isDunning": false,
+    "isUnderBillingCycle": false,
+    "isTcwp": true,
+    "paymentMethod": "P",
+    "segment": "SME"
+  },
+  "billingObjectDataList": [
+    {
+      "msisdn": "3405051294",
+      "status": "Active",
+      "paymentType": "Postpaid",
+      "subscriptionName": "SIM_MOBILE",
+      "isDual": false,
+      "isVodafone": true,
+      "isEnriched": false
+    }
+  ]
 }
