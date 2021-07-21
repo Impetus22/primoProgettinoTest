@@ -45,7 +45,7 @@ public class wiremock{
 
         WireMock.configureFor(HOST,PORT);
 
-        WireMock.stubFor(WireMock.get("/v100/profile").willReturn(mockResponse));
+        WireMock.stubFor(WireMock.get("/v100/profiles").willReturn(mockResponse));
 
        // WireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/v1/profile")).willReturn(WireMock.aResponse()
                 //.withHeader("Content-Type", "text/plain")
@@ -54,7 +54,7 @@ public class wiremock{
     }
     @Test
     public void testing() throws IOException {
-        String testingApi = "http://mock-dev.vtlab.local:8083/v100/profile";
+        String testingApi = "http://mock-dev.vtlab.local:8083/v100/profiles";
         RestAssured.given().when().get(new URL(testingApi)).then().assertThat().statusCode(200);
     }
     @AfterClass
