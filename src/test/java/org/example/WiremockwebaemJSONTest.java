@@ -20,6 +20,7 @@ public class WiremockwebaemJSONTest {
     public static void inizializzoServer(){
         server.start();
         WireMock.configureFor(HOST,PORT);
+
         WireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/prova"))
                 .willReturn(WireMock.aResponse().withStatus(200)
                         .withHeader("Content-Type", "application/json").withBodyFile("index.json")));
@@ -28,9 +29,9 @@ public class WiremockwebaemJSONTest {
     public void testing(){
         String testingApi = "http://mock-dev.vtlab.local:8083/prova";
         Response response = RestAssured.given().when().get(testingApi).then().extract().response();
-        //WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/prova")));
-        //Assert.assertEquals(response.jsonPath().get("profileData.hashedUsername"),"75c3d038ad8dae2825012e1b1e024b2d");
-        Assert.assertEquals(response.getHeader("Content-Type"),"application/json");
+        WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/prova")));
+        Assert.assertEquals(response.jsonPath().get("profileData.hashedUsername"),"75c3d038ad8dae2825012e1b1e024b2d");
+        //Assert.assertEquals(response.getHeader("Content-Type"),"application/json");
     }
     @AfterClass
     public static void chiudoServer(){
