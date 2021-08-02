@@ -1,5 +1,6 @@
 package org.example.web;
 
+import org.example.UcbServiceMock;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,12 +12,12 @@ import org.example.App;
 @RestController
 public class AppController {
 
-
+    private final UcbServiceMock ucbServiceMock;
     private final App app;
-    public AppController(App app){
+    public AppController(App app, UcbServiceMock ucbServiceMock){
         this.app=app;
+        this.ucbServiceMock=ucbServiceMock;
     }
-
 
     @GetMapping("/fattoriale/{numero}")
     public  int Calcolofattoriale(@PathVariable("numero") int numero) {
@@ -33,5 +34,10 @@ public class AppController {
         return app.binomiale(n,k);
     }
 
+    @GetMapping("/prova")
+    public  String Prova() {
+        String stringa = "";
+        return stringa;
+    }
 
 }
